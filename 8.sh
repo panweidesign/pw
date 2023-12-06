@@ -1,5 +1,29 @@
 #!/bin/bash
 
+# 绿色
+GREEN="\e[32m"
+NO_COLOR="\e[0m"
+
+# 打印文本并将全部内容设置为绿色
+echo -e "${GREEN}######  #     #    ######     #    #     # #     # ####### ###"
+echo -e "#     #  #   #     #     #   # #   ##    # #  #  # #        #  "
+echo -e "#     #   # #      #     #  #   #  # #   # #  #  # #        #  "
+echo -e "######     #       ######  #     # #  #  # #  #  # #####    #  "
+echo -e "#     #    #       #       ####### #   # # #  #  # #        #  "
+echo -e "#     #    #       #       #     # #    ## #  #  # #        #  "
+echo -e "######     #       #       #     # #     #  ## ##  ####### ###${NO_COLOR}"
+
+#!/bin/bash
+
+echo "本脚本由@duoduopan 提供。https://www.youtube.com/@duoduopan youtube频道"
+
+# 用户选择是否继续执行脚本
+read -p '是否继续运行脚本？(y/n): ' user_choice
+if [[ $user_choice != "y" && $user_choice != "Y" ]]; then
+    echo "用户选择退出，脚本终止。"
+    exit 0
+fi
+
 while true; do
     echo "请选择要执行的操作："
     echo "0. 显示Ubuntu常用命令"

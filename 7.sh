@@ -21,9 +21,10 @@ echo -e "${YELLOW}Script provided by @duoduopan${NO_COLOR}"
 echo -e "${YELLOW}YouTube Channel: https://www.youtube.com/@duoduopan${NO_COLOR}"
 echo ""
 
-# User confirmation
-read -p 'Continue running the script? (y/n): ' user_choice
-if [[ $user_choice != "y" && $user_choice != "Y" ]]; then
+# User confirmation with default to 'y'
+read -p 'Continue running the script? (y/n) [y]: ' user_choice
+user_choice=${user_choice:-y}
+if [[ "$user_choice" != "y" && "$user_choice" != "Y" ]]; then
     echo -e "${RED}User chose to exit, script terminated.${NO_COLOR}"
     exit 0
 fi
